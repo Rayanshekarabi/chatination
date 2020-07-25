@@ -1,0 +1,119 @@
+import 'package:chatination/widgets/widget.dart';
+import 'package:flutter/material.dart';
+
+class SignIn extends StatefulWidget {
+
+  final Function toggle;
+  SignIn(this.toggle);
+
+
+  @override
+  _SignInState createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: appBarMain(context),
+      body: SingleChildScrollView(
+              child: Container(
+                height: MediaQuery.of(context).size.height - 50,
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            child: new Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                new TextField(
+                    decoration: textFieldInputDecoration("Email"),
+                    style: simpleTextStyle()),
+                new TextField(
+                    decoration: textFieldInputDecoration("Password"),
+                    style: simpleTextStyle()),
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    child: new Text(
+                      'Forgot Password?',
+                      style: simpleTextStyle(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.symmetric(
+                    vertical: 20,
+                  ),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        const Color(0xff007ef4),
+                        const Color(0xff2a75bc)
+                      ]),
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(color: Colors.white, fontSize: 17),
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.symmetric(
+                    vertical: 20,
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Text(
+                    'Sign In with Google',
+                    style: TextStyle(color: Colors.black54, fontSize: 17),
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                new Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    new Text(
+                      "Don't have account? ",
+                      style: mediumTextStyle(),
+                    ),
+                    GestureDetector(
+                        onTap: (){
+                          widget.toggle();
+                        },
+                        child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        child: new Text(
+                          "Register now",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 70,)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

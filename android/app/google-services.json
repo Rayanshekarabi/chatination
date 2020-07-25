@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "229164823597",
+    "firebase_url": "https://chatination-70bea.firebaseio.com",
+    "project_id": "chatination-70bea",
+    "storage_bucket": "chatination-70bea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229164823597:android:af5d3e06eea5472c1eb4a4",
+        "android_client_info": {
+          "package_name": "com.example.chatination"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229164823597-rii5d5ooorrdh6bbtuu1ojldh3sl2al2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ_nZn1txsQWNu4ueyJpHhxMA8KGwjQNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229164823597-rii5d5ooorrdh6bbtuu1ojldh3sl2al2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
