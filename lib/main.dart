@@ -1,6 +1,5 @@
 import 'package:chatination/helper/authenticate.dart';
-import 'package:chatination/views/signin.dart';
-import 'package:chatination/views/signup.dart';
+import 'package:chatination/views/chatRoomsScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: Authenticate()
+      home: ChatRoom()
     );
   }
 }
